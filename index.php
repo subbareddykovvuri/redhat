@@ -3,7 +3,7 @@ $host=getenv("MARIADB_SERVICE_HOST");
 $user=getenv("MYSQL_USER");
 $pass=getenv("MYSQL_PASSWORD");
 $dbname=getenv("MYSQL_DATABASE");
-$con=mysqli_connect($host,$user,$pass,$dbname);
+$con=mysqli_connect($host,$user,$pass,"student_registration");
 $row="SELECT * FROM news order by Time DESC";
 $re=mysqli_query($con,$row);
  
