@@ -1,8 +1,8 @@
 <?php
 $host=getenv("MARIADB_SERVICE_HOST");
-$user=getenv("db-user");
-$pass=getenv("db-password");
-$dbname=getenv("db-name");
+$user=getenv("MYSQL_USER");
+$pass=getenv("MYSQL_PASSWORD");
+$dbname=getenv("MYSQL_DATABASE");
 $con=mysqli_connect($host,$user,$pass,$dbname);
 $row="SELECT * FROM news order by Time DESC";
 $re=mysqli_query($con,$row);
