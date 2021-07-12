@@ -1,10 +1,10 @@
 <?php
 $host=getenv("MYSQL_SERVICE_HOST");
-echo "<script>alert("$host");</script>";
+
 $user=getenv("MYSQL_USER");
 $pass=getenv("MYSQL_PASSWORD");
 $dbname=getenv("MYSQL_DATABASE");
-$con=mysqli_connect($host,$user,$pass,"student_registration");
+$con=mysqli_connect($host,$user,'',$dbname);
 $row="SELECT * FROM news order by Time DESC";
 $re=mysqli_query($con,$row);
  
