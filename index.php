@@ -1,6 +1,6 @@
 <?php
 
-$con=mysqli_connect("localhost","root","","student_registration");
+$con=mysqli_connect("MARIADB_SERVICE_HOST","root","","student_registration");
 $row="SELECT * FROM news order by Time DESC";
 $re=mysqli_query($con,$row);
  
