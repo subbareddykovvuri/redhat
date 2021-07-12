@@ -1,6 +1,6 @@
 <?php
 $host=getenv("MYSQL_SERVICE_HOST");
-echo "<script>alert($host);</script>";
+echo "<script>alert("$host");</script>";
 $user=getenv("MYSQL_USER");
 $pass=getenv("MYSQL_PASSWORD");
 $dbname=getenv("MYSQL_DATABASE");
