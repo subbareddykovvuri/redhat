@@ -1,5 +1,5 @@
 <?php
-$host=getenv("MARIADB_SERVICE_HOST");
+$host=getenv("MYSQL_SERVICE_HOST");
 echo $host;
 $user=getenv("MYSQL_USER");
 $pass=getenv("MYSQL_PASSWORD");
