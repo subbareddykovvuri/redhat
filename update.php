@@ -15,8 +15,10 @@ $row1=mysqli_fetch_array($re);
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="navbar.css">
+
 </head>
-<body>
+<body  style="background-image: url('back2.jpg');background-size: cover;">
       <?php
             
             if(isset($_POST['update'])){
@@ -44,21 +46,20 @@ $row1=mysqli_fetch_array($re);
             ?>
 
    <div class="container">
-      <div>
-      <nav class="navbar navbar-inverse navbar-fixed-top" style="margin-top: 0px;">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Student Info</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li ><a href="home.php">Home</a></li>
-            <li ><a href="profile.php">Profile</a></li>
-            <li class="active"><a href="#">Update</a></li>
-            <li><a href="logout.php">Logout</a></li>
-          </ul>
-        </div>
-      </nav>
-      </div>
+      <nav  class="navbar-fixed-top">
+      <input  type="checkbox" id="check">
+      <label style="width: 0px;" for="check" class="checkbtn">
+        <i   class="glyphicon glyphicon-th-list"></i>
+      </label>
+       <label  class="logo"><a href="#" style="text-decoration: none;color: #d8b566"> Student Info</a></label>
+      <ul>
+        <li><a  href="home.php">HOME</a></li>
+      <li ><a href="news.php">News</a></li>
+      <li ><a href="profile.php">Profile</a></li>
+      <li><a  class="active" href="#">Update</a></li>
+      <li><a href="logout.php">Logout</a></li>
+      </ul>
+    </nav>
       <div class="row" style="margin-top: 100px;">
          <div class="col-md-4">
             
