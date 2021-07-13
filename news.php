@@ -1,7 +1,7 @@
 <?php
 
 $con=mysqli_connect("localhost","root","","student_registration");
-$row="SELECT * FROM news order by Time";
+$row="SELECT * FROM news order by Time DESC";
 $re=mysqli_query($con,$row);
  
 ?>

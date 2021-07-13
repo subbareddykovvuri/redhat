@@ -110,8 +110,9 @@ $row1=mysqli_fetch_array($re);
                   <option>Prefer not to say</option>
                </select>
                <br>
-               <button style="margin-top: 15px;display: block;margin-left: auto;margin-right: auto;" class="btn btn-danger" name = "update" type = "submit" id = "update" value = "Update">Update</button>
+               <button style="margin-top: 15px;float: left;" class="btn btn-success" name = "update" type = "submit" id = "update" value = "Update">Update</button>
             </form>
+            <a href="profile.php"><button class="btn btn-danger" style="float:right;">Cancel</button></a>
          </div>
          </div>
       </div>
