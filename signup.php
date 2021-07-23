@@ -8,7 +8,7 @@ $gender=$_POST['gender'];
 $college=$_POST['clg'];
 $branch=$_POST['branch'];
 if(!empty($roll) || !empty($roll) || !empty($roll) || !empty($roll) || !empty($roll) || !empty($roll) || !empty($roll)){
-	$con=mysqli_connect("localhost","root","","student_registration");
+	include "config.php";
 	$insert="INSERT Into student SET Roll_number='".$roll."',Name='".$uname."',Email='".$email."',Password='".$password."',Gender='".$gender."',College='".$college."',Branch='".$branch."'";
 	$res=mysqli_query($con,$insert);
       if($res){

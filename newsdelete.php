@@ -1,7 +1,7 @@
 <?php
 session_start();
 $roll1=$_SESSION['roll'];
-$con=mysqli_connect("localhost","root","","student_registration");
+include "config.php";
 if (@$_GET['delete_id']!=""){
   
   $did=$_GET['delete_id'];

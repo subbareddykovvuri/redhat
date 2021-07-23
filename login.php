@@ -4,7 +4,7 @@ if (isset($_POST['login'])) {
 	$roll_no=$_POST['roll'];
 	$password=$_POST['pwd'];
 	if(!empty($roll_no) || !empty($password)){
-		$con=mysqli_connect("localhost","root","","student_registration");
+		include "config.php";
 		$select="SELECT * FROM student WHERE Roll_number='$roll_no' AND Password='$password'";
 		$res=mysqli_query($con,$select);
 		$row=mysqli_num_rows($res);

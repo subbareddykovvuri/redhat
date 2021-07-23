@@ -3,7 +3,7 @@ session_start();
 $roll1=$_SESSION['roll'];
 $update_id=$_GET['update_id'];
 
-$con=mysqli_connect("localhost","root","","student_registration");
+include "config.php";
 $nrow="SELECT * FROM news WHERE ID='".$update_id."'";
 $re=mysqli_query($con,$nrow);
 $nrow1=mysqli_fetch_array($re);
