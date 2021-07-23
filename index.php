@@ -1,11 +1,8 @@
 <?php
-$host=getenv("MYSQL_SERVICE_HOST");
 
-$user=getenv("MYSQL_USER");
-$pass=getenv("MYSQL_PASSWORD");
-$dbname=getenv("MYSQL_DATABASE");
-$con=mysqli_connect($host,$user,'',$dbname);
+$con=mysqli_connect("localhost","root","","student_registration");
 $row="SELECT * FROM news order by Time DESC";
+
 $re=mysqli_query($con,$row);
  
 ?>
@@ -44,19 +41,21 @@ $re=mysqli_query($con,$row);
        
          
           
-         <form style="margin-top:50px;border-radius: 10px;background-color: rgba(255,255,255);box-shadow:  0 0 10px rgba(255,255,255,.3);padding: 30px;padding-bottom: 50px;">
+         <form style="border: 3px solid rgba(0, 0, 0,.2);margin-top:50px;border-radius: 10px;background-color: rgba(255,255,255);box-shadow:  0 0 10px rgba(255,255,255,.3);padding: 30px;padding-bottom: 50px;">
 
             <h3 style="text-align: center;font-weight: bold;">ADITYA EDUCATIONAL INSTITUTIONS</h3><br>
-            <h5 style="text-align: right;">Date: <?php echo $row1['Time']?></h5>
+            <br>
+            <h5 style="text-align: right;">Date: <?php echo $row1['Time']?></h5><br>
 
-            <h4 style="margin-top:20px;font-weight: bold;text-align: center;text-transform: uppercase;"><u><?php echo $row1['Heading']?></u></h4><br>
+            <h4 style="margin-top:20px;font-weight: bold;text-align: center;text-transform: uppercase;"><u><?php echo $row1['Heading']?></u></h4><br><br>
 
-           <h5 style="margin-top:0px;">
+           <p style="margin-top:0px;">
              <?php echo $row1['Description']?>
-           </h5>
-          
+           </p>
+           <p style="text-align:center;">Thank you</p>
+          <br><br>
           <h5 style="margin-top:20px;float: right;">Posted by: <?php echo $row1['Name']?></h5>
-
+          <br>
          </form> 
              
   <?php }
