@@ -1,6 +1,6 @@
 <?php
 
-$con=mysqli_connect("localhost","root","","student_registration");
+$con=mysqli_connect("redhat-1-bbfhh","db-user","db-password","student_registration");
 $row="SELECT * FROM news order by Time DESC";
 
 $re=mysqli_query($con,$row);
