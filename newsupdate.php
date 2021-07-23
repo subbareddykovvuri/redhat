@@ -17,6 +17,7 @@ $nrow1=mysqli_fetch_array($re);
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="//cdn.ckeditor.com/4.16.1/basic/ckeditor.js"></script>
    <link rel="stylesheet" href="navbar.css">
 </head>
 <body style="background-image:url('index.jpg') ;">
@@ -79,6 +80,9 @@ $nrow1=mysqli_fetch_array($re);
         <a href="profile.php"><button class="btn btn-danger" style="float:right;">Cancel</button></a>
         </div>
         <div class="col-md-3"></div>
+        <script>
+    CKEDITOR.replace('Description');
+  </script>
       </div>
     </div>
 <?php

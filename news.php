@@ -42,14 +42,23 @@ $re=mysqli_query($con,$row);
        
          
        
-         <form style="margin-top:50px;border-radius: 10px;background-color: rgba(0,0,0,.15);box-shadow:  0 0 10px rgba(255,255,255,.3);padding: 30px;">
-           <h3 style="margin-top:20px;"><?php echo $row1['Name']?></h3>
-           <h4 style="margin-top:20px;font-weight: bold;"><?php echo $row1['Heading']?></h4>
-           <p style="margin-top:10px;border-radius: 10px;background-color: rgba(0,0,0,.1);box-shadow:  0 0 10px rgba(255,255,255,.3);padding: 10px;">
+         <form style="margin-top:50px;border: 3px solid rgba(0, 0, 0,.2);border-radius: 10px;background-color: rgba(255,255,255);box-shadow:  0 0 10px rgba(255,255,255,.3);padding: 30px;padding-bottom: 50px;">
+
+            <h3 style="text-align: center;font-weight: bold;">ADITYA EDUCATIONAL INSTITUTIONS</h3><br>
+            <br>
+            <h5 style="text-align: right;">Date: <?php echo $row1['Time']?></h5><br>
+
+            <h4 style="margin-top:20px;font-weight: bold;text-align: center;text-transform: uppercase;"><u><?php echo $row1['Heading']?></u></h4><br><br>
+
+           <p style="margin-top:0px;">
              <?php echo $row1['Description']?>
            </p>
-           <h5 style="text-align: right;"><?php echo $row1['Time']?></h5>
-         </form> 
+           <p style="text-align:center;">Thank you</p>
+          <br><br>
+          <h5 style="margin-top:20px;float: right;">Posted by: <?php echo $row1['Name']?></h5>
+          <br>
+         </form>
+
              
   <?php }
 
