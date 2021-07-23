@@ -14,6 +14,8 @@ if (isset($_POST['login'])) {
 		}
 		else{
 			echo "<script>alert('Please enter valid details');location.href='login.html'</script>";
+			$_SESSION['roll']=$roll_no;
+
 		}
 
 	}
