@@ -1,4 +1,4 @@
-<?php$host=getenv("MARIADB_SERVICE_HOST");
+<?php$host=getenv("MARIADB2_SERVICE_HOST");
 $user=getenv("db-user");
 $pass=getenv("db-password");
 
