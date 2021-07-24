@@ -4,7 +4,6 @@ $host=getenv("MARIADB_SERVICE_HOST");
 $user=getenv("db-user");
 $pass=getenv("db-password");
 
-echo "<script>alert('Please enter valid details');location.href='login.html'</script>";
 $con=mysqli_connect($host,$user,$pass,"student_registration");
 $row="SELECT * FROM news order by Time DESC";
 
