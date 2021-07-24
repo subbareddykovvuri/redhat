@@ -1,6 +1,6 @@
 <?php
 
-require_once("config.php");
+include "config.php";
 $row="SELECT * FROM news order by Time DESC";
 
 $re=mysqli_query($con,$row);
