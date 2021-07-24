@@ -1,8 +1,6 @@
 <?php
 
-$host=getenv("MARIADB_SERVICE_HOST");
-$user=getenv("db-user");
-$pass=getenv("db-password");
+include "config.php"
 $con=mysqli_connect($host,$user,$pass,"student_registration");
 $row="SELECT * FROM news order by Time DESC";
 
@@ -39,9 +37,9 @@ $re=mysqli_query($con,$row);
          
        </div>
        <div class="col-md-6">
-	        <h1>hi</h1>
-         <!--<?php  
-        while($row1=mysqli_fetch_array($re))  { ?>-->
+	        
+         <?php  
+        while($row1=mysqli_fetch_array($re))  { ?>
        
 	      
           
@@ -62,11 +60,11 @@ $re=mysqli_query($con,$row);
           <br>
          </form> 
              
-  <!--<?php }
+  <?php }
 
 
 
-  ?>-->
+  ?>
 </div>
        <div class="col-md-3">
          
