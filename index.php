@@ -39,10 +39,11 @@ $re=mysqli_query($con,$row);
          
        </div>
        <div class="col-md-6">
+	        <h1>hi</h1>
          <?php  
         while($row1=mysqli_fetch_array($re))  { ?>
        
-	       <h1>hi</h1>
+	      
           
          <form style="border: 3px solid rgba(0, 0, 0,.2);margin-top:50px;border-radius: 10px;background-color: rgba(255,255,255);box-shadow:  0 0 10px rgba(255,255,255,.3);padding: 30px;padding-bottom: 50px;">
 
