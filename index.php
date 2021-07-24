@@ -40,8 +40,8 @@ $re=mysqli_query($con,$row);
        </div>
        <div class="col-md-6">
 	        <h1>hi</h1>
-         <?php  
-        while($row1=mysqli_fetch_array($re))  { ?>
+         <!--<?php  
+        while($row1=mysqli_fetch_array($re))  { ?>-->
        
 	      
           
@@ -62,11 +62,11 @@ $re=mysqli_query($con,$row);
           <br>
          </form> 
              
-  <?php }
+  <!--<?php }
 
 
 
-  ?>
+  ?>-->
 </div>
        <div class="col-md-3">
          
