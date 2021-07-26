@@ -1,7 +1,7 @@
 <?php
 session_start();
 $roll1=$_SESSION['roll'];
-$con=mysqli_connect("localhost","root","","student_registration");
+include "config.php";
 $row="SELECT * FROM student WHERE Roll_number='".$roll1."'";
 $re=mysqli_query($con,$row);
 $row1=mysqli_fetch_array($re);
