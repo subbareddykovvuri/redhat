@@ -15,9 +15,12 @@ $row1=mysqli_fetch_array($re);
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="//cdn.ckeditor.com/4.16.1/basic/ckeditor.js">
+    
+  </script>
    <link rel="stylesheet" href="navbar.css">
 </head>
-<body>
+<body style="background-image:url('index.jpg') ;">
   <?php
             
             if(isset($_POST['post'])){
@@ -28,7 +31,7 @@ $row1=mysqli_fetch_array($re);
             
             if(!empty($prollno) || !empty($pname) || !empty($subject) || !empty($description)  ){
                
-                $insert="insert into news (Rollno,Name,Heading,Description,Time) values('$prollno','$pname','$subject','$description',CURRENT_TIMESTAMP)" ;              
+                $insert="insert into news (ID,Rollno,Name,Heading,Description,Time) values(UUID(),'$prollno','$pname','$subject','$description',CURRENT_TIMESTAMP)" ;              
                 $res=mysqli_query($con,$insert);
               if($res){
                 echo "<script>alert('Successfully Posted');location.href='home.php'</script>";
@@ -113,15 +116,15 @@ $row1=mysqli_fetch_array($re);
     
 
     <div class="container">
-  <div class="row" style="margin-top: 50px;">
+  <div class="row" style="margin-top: 50px;margin-bottom: 30px;">
     <div class="col-md-3"></div>
-    <div class="col-md-6" style="border: 1px solid blue;border-radius: 10px;background-color: rgba(0,0,0,.3);box-shadow:  0 0 10px rgba(255,255,255,.3);">
+    <div class="col-md-6" style="border-radius: 10px;background-color: rgba(0,0,50,.3);box-shadow:  0 0 10px rgba(255,255,255,.3);">
     <form action="home.php" method="POST" class="form-group" >
-      <h3 style="text-align: center;margin-top: 10px;font-weight: bold;">New </h3>
+      <h3 style="text-align: center;margin-top: 20px;font-weight: bold;">New </h3><br>
     <label style="margin-top: 10px;">Subject:</label>
-    <input type="text" class="form-control" id="rollno" name="Subject" required="">
+    <input type="text" class="form-control" id="rollno" name="Subject" required=""><br>
     <label style="margin-top: 10px;">Description:</label>
-    <textarea type="text" class="form-control" id="name" name="Description" required="" style="height: 250px;"></textarea>
+    <textarea type="text" class="form-control" id="name" name="Description" required=""  cols="50" rows="10"></textarea><br>
   
     
   <button type="submit" class="btn btn-success" name="post" style="margin-top: 10px;width: 100%">Post</button>
@@ -130,6 +133,9 @@ $row1=mysqli_fetch_array($re);
   <div class="col-md-3">
     
   </div>
+  <script>
+    CKEDITOR.replace('Description');
+  </script>
   </div>
   
 </div>
